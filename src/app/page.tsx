@@ -2,100 +2,74 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+    <main className="min-h-screen w-full flex sm:items-center justify-center">
+      <section className="flex max-sm:flex-col h-full w-full">
+        <div className="w-full sm:w-[65%] h-full flex flex-col">
+          <div className="sm:pl-36 max-sm:p-9 sm:py-16">
+            <div>
+              <Image
+                src={"/images/logo.svg"}
+                alt="logo"
+                width={200}
+                height={50}
+                className="object-contain sm:w-48 sm:h-10 w-36 h-9"
+              />
+            </div>
+          </div>
+          <div className="sm:hidden">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              src={"/images/hero-mobile.jpg"}
+              alt="hero"
+              width={500}
+              height={500}
+              className="object-cover w-full h-full"
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          </div>
+          <div className="sm:pl-36 max-sm:p-9 sm:py-16 flex flex-col gap-8 sm:gap-12 whiteToLightRed">
+            <h1 className="sm:text-6xl text-5xl max-sm:text-center text-primary-desaturatedRed font-light">
+              W E ' R E <br />{" "}
+              <span className="font-semibold text-secondary-darkGrayishRed">
+                C O M I N G <br /> S O O N
+              </span>
+            </h1>
+            <p className="font-semibold text-primary-desaturatedRed max-sm:text-center sm:w-1/2">
+              Hello fellow shoppers! We're currently building our new fashion
+              store. Add your email below to stay up-to-date with announcements
+              and our launch deals.
+            </p>
+            <form className="flex gap-2 border-2 w-full sm:w-1/2 justify-between border-primary-desaturatedRed border-opacity-50 rounded-full">
+              <input
+                type="email"
+                placeholder="Email Address"
+                id="email"
+                className="py-2 px-6 rounded-full w-4/5 focus:outline-none"
+              />
+              <button
+                type="submit"
+                className="bg-lightRedToRed hover:bg-whiteToLightRed rounded-full"
+              >
+                <div className="py-3 px-8">
+                  <Image
+                    src={"/images/icon-arrow.svg"}
+                    alt="arrow"
+                    width={12}
+                    height={12}
+                  />
+                </div>
+              </button>
+            </form>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <div className="w-[35%] max-sm:hidden h-full">
           <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+            src={"/images/hero-desktop.jpg"}
+            alt="hero"
+            width={500}
+            height={500}
+            className="object-cover w-full h-full"
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        </div>
+      </section>
+    </main>
   );
 }

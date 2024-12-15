@@ -19,3 +19,11 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.lightRedToRed {
+  background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+}
+
+.whiteToLightRed{
+  background: (135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%))
+}
